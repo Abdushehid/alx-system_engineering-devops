@@ -1,11 +1,2 @@
 #!/bin/bash
-WATER=water
-STIR=stir
-
-WATER_VALUE=${!WATER}
-STIR_VALUE=${!STIR}
-
-BESTCHOL_VALUE=$(($WATER_VALUE + $STIR_VALUE))
-
-echo $BESTCHOL_VALUE
-
+printf '%o\n' $(( $#$( echo $WATER | tr water 01234 ) + $#$( echo $STIR |tr stir. 01234 ) )) | tr 01234567 bestchol

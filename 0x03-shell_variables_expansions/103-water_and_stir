@@ -1,0 +1,11 @@
+#!/bin/bash
+WATER=water
+STIR=stir
+
+WATER_VALUE=${!WATER}
+STIR_VALUE=${!STIR}
+
+BESTCHOL_VALUE=$(($WATER_VALUE + $STIR_VALUE))
+
+echo $BESTCHOL_VALUE
+
